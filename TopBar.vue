@@ -55,9 +55,11 @@ export default {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  font-family: Agenda, sans-serif;
 }
 .middle{
   padding: 15px;
+  font-family: Agenda, sans-serif;
 }
 .middle:hover{
    text-decoration: underline;
