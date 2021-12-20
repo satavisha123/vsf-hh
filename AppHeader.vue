@@ -28,6 +28,7 @@
           </div>
         </nuxt-link>
       </template>
+
       <!-- <template #navigation>
         <HeaderNavigation :isMobile="isMobile" />
       </template>
@@ -35,7 +36,67 @@
         <LocaleSelector class="smartphone-only" />
       </template> -->
       <template #header-icons>
-        <div><P>LOCATION</P></div>
+        <div class="store-dropdown--button">
+          <svg
+            class="svg-inline--fa fa-map-marker-alt fa-w-12"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="map-marker-alt"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+            ></path></svg
+          ><!-- <i class="fas fa-map-marker-alt"></i> Font Awesome fontawesome.com -->
+          <svg
+            class="svg-inline--fa fa-times fa-w-10"
+            style="display: none"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="times"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
+            ></path></svg
+          ><!-- <i class="far fa-times" style="display:none"></i> Font Awesome fontawesome.com -->
+          <div class="store-dropdown-info">
+            <span
+              class="store-title store-name"
+              id="store-name"
+              title="Home Hardware - St. Jacobs"
+              >Home Hardware - St. Jacobs</span
+            >
+            <span class="store-hours"> Today's Hours: 8:00 am - 6:00 pm </span>
+          </div>
+          <svg
+            id="for-dropdown"
+            class="svg-inline--fa fa-chevron-down fa-w-14"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="chevron-down"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"
+            ></path></svg
+          ><!-- <i class="far fa-chevron-down"></i> Font Awesome fontawesome.com -->
+        </div>
         <div class="sf-header__icons">
           <SfButton
             v-e2e="'app-header-account'"
@@ -586,6 +647,20 @@ svg:not(:root).svg-inline--fa {
 ::v-deep .sf-header__navigation {
   margin-left: 0px;
 }
+
+::v-deep .sf-header-navigation-item__link {
+  font-family: Agenda, sans-serif;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+::v-deep .sf-header-navigation-item__link:hover {
+  border-bottom: none;
+}
 .sf-icon {
   --icon-color: #e4002b;
   margin-right: 9px;
@@ -624,11 +699,33 @@ svg:not(:root).svg-inline--fa {
   width: 1.125em;
   color: black;
 }
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+    position: relative;
+    top: -7px;
+    padding-right: 5px;
+}
+.store-hours {
+  font-size: 12px;
+  text-align: left;
+}
+#for-dropdown {
+  width: 0.75em;
+  position: relative;
+  top: -7px;
+}
+.store-dropdown--button {
+  display: flex;
+  color: white;
+  font-weight: 600;
+  padding-right: 50px;
+}
 .for-the-box {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
   background: #fff;
   font-size: 1.15em;
   font-weight: 600;
+
 }
 #store-branding {
   float: left;
